@@ -112,7 +112,7 @@ public class Phase {
      * @param restrictRecipes whether {@link Item} instances associated by a recipe should be blocked as well
      * @return the mutated {@code Phase} being operated on
      */
-    private Phase item(String itemPattern, boolean restrictRecipes) {
+    public Phase item(String itemPattern, boolean restrictRecipes) {
         for (Item item : match(itemPattern, Registry.ITEM)) {
             blacklistedItems.add(item);
 
